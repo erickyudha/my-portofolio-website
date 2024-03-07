@@ -1,0 +1,30 @@
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Open Sans", sans-serif;
+$primary-color: #6707c2;
+$secondary-color: rgb(208, 211, 33);
+
+@mixin neon-text($color, $animation) {
+    color: $color;
+    text-shadow: 0 0 10px $color, 0 0 20px $color, 0 0 30px $color;
+    animation: $animation 1s ease-in-out infinite alternate;
+}
+
+@mixin neonGlow($color1, $color2) {
+    @keyframes neonGlow1 {
+      from {
+        text-shadow: 0 0 2px $color1, 0 0 5px $color1, 0 0 8px $color1;
+      }
+      to {
+        text-shadow: 0 0 4px $color1, 0 0 6px $color1, 0 0 9px $color1;
+      }
+    }
+  
+    @keyframes neonGlow2 {
+      from {
+        text-shadow: 0 0 2px $color2, 0 0 5px $color2, 0 0 8px $color2;
+      }
+      to {
+        text-shadow: 0 0 4px $color2, 0 0 6px $color2, 0 0 9px $color2;
+      }
+    }
+  }

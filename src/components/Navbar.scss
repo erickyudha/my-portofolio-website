@@ -1,0 +1,33 @@
+@use "../base";
+
+@include base.neonGlow(base.$primary-color, base.$secondary-color);
+
+nav {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 0;
+    padding: 30px 70px;
+    position: fixed;
+    box-sizing: border-box;
+
+    div {
+        display: flex;
+        gap: 1em;
+
+        a {
+            font-weight: 700;
+            font-size: 1em;
+            color: #fff;
+        }
+    }
+
+    h1 {
+        font-weight: 900;
+        font-size: 1.8em;
+        color: base.$secondary-color;
+        margin: 0;
+        opacity: 1;
+    }
+}
