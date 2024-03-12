@@ -1,7 +1,5 @@
 @use "../base";
 
-@include base.neonGlow(base.$primary-color, base.$secondary-color);
-
 nav {
     display: flex;
     align-items: end;
@@ -11,6 +9,12 @@ nav {
     padding: 30px 70px;
     position: fixed;
     box-sizing: border-box;
+    transition: opacity 0.5s ease;
+    z-index: 99 ;
+
+    &.hidden {
+        opacity: 0;
+    }
 
     div {
         display: flex;
@@ -24,10 +28,17 @@ nav {
     }
 
     h1 {
-        font-weight: 900;
-        font-size: 1.8em;
+        font-weight: bold;
+        font-size: 2em;
         color: base.$secondary-color;
         margin: 0;
         opacity: 1;
+        font-family: base.$special-font;
+        text-shadow: 0 0 2px base.$secondary-color, 0 0 1px base.$secondary-color, 0 0 1px base.$secondary-color;
     }
+}
+
+.with-bg {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    filter: blurr(5px);
 }

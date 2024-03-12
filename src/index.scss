@@ -1,5 +1,19 @@
 @use "base";
 
+@font-face {
+  font-family: 'Hello Denver';  /* Replace with your desired font name */
+  src: url('./hellodenverdisplaybold_v1.6.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hello Denver';  /* Replace with your desired font name */
+  src: url('./hellodenverdisplaybold_v1.6.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -16,4 +30,23 @@ body {
   margin: 0;
   background-color: #000000;
   color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 5px; // Adjust the width of the scrollbar
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: base.$neon-primary-color; // Set the neon purple color
+  border-radius: 5px; // Set the border-radius to make it round
+  box-shadow: 0 0 10px base.$neon-primary-color, 0 0 20px base.$neon-primary-color, 0 0 30px base.$neon-primary-color; // Add a glowing effect using box-shadow
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000; // Set the background color of the track
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: base.$neon-secondary-color; // Set the hover color
+  box-shadow: 0 0 10px base.$neon-secondary-color, 0 0 20px base.$neon-secondary-color, 0 0 30px base.$neon-secondary-color; // Add a glowing effect on hover
 }
