@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './pages/Layout';
 import Home from './pages/Home';
+import EducationSlide from './slides/education/EducationSlide'
 
 
 const root = ReactDOM.createRoot(
@@ -16,6 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path='/slide' element={<EducationSlide/>} />
         </Route>
       </Routes>
     </BrowserRouter>

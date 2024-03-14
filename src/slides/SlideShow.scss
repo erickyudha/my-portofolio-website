@@ -1,0 +1,243 @@
+@use '../base';
+
+$neon-primary-color: #D42CCA;
+$neon-secondary-color: #FFD5FF;
+
+nav,
+footer {
+    display: none;
+}
+
+.slide-show {
+    position: absolute;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+    justify-items: center;
+}
+
+.sidebar-slide {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+
+    li {
+        padding: 20px;
+        font-size: 1em;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 100%;
+        color: $neon-primary-color;
+        margin-left: 10px;
+        margin-right: 40px;
+    }
+
+    li:hover {
+        transform: scale(1.1);
+        background-color: rgba($color: $neon-primary-color, $alpha: 0.3);
+    }
+
+    .forward-1 {
+        padding-left: 20px;
+        transition: 0.1s;
+    }
+
+    .forward-2 {
+        padding-left: 30px;
+        transition: 0.2s;
+    }
+
+    .forward-3 {
+        padding-left: 40px;
+        transition: 0.3s;
+        font-size: 1.3em;
+        color: $neon-secondary-color;
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-shadow: 1px 0px 4px $neon-secondary-color, 2px 0px 4px $neon-secondary-color, 3px 0px 4px $neon-secondary-color, 2px 0px 3px $neon-primary-color, 2px 3px 15px $neon-primary-color, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px $neon-primary-color, 40px 0vw 200px $neon-primary-color;
+        background-color: rgba($color: $neon-primary-color, $alpha: 0.2);
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+    background-image: url('./Neon\ City.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .overlay {
+        padding: 20px 5vw;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.65);
+
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .top-text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h4,
+        h1 {
+            margin: 0;
+        }
+
+        .line {
+            width: 20vw;
+            height: 3px;
+            background-color: $neon-secondary-color;
+            box-shadow: inset 0 0 0.5em 0 $neon-secondary-color, 0 0 0.5em 0 $neon-secondary-color;
+        }
+
+        h1 {
+            font-family: base.$primary-font;
+            text-transform: uppercase;
+            color: $neon-secondary-color;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-shadow:
+                1px 0px 2px $neon-secondary-color,
+                1.5px 0px 2px $neon-secondary-color,
+                2px 0px 2px $neon-secondary-color,
+                2px 0px 3px $neon-primary-color,
+                2px 3px 15px $neon-primary-color,
+                2px 0px 15px, 5px 0px 125px,
+                20px 0vw 200px $neon-primary-color,
+                40px 0vw 200px $neon-primary-color;
+
+        }
+
+        h4 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .period {
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: $neon-secondary-color;
+        }
+
+        .decoration {
+            position: absolute;
+            top: 100px;
+            right: 10px;
+            transform: rotate(90deg);
+            opacity: 0.2;
+            font-weight: 700;
+        }
+    }
+
+    .slide-content {
+        flex-grow: 1;
+        align-self: center;
+    }
+
+    .bottom-text {
+        box-sizing: border-box;
+        padding: 5px;
+    }
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.close-btn {
+    height: 50px;
+    text-decoration: none;
+    margin-right: 20px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transform: scale(0.7);
+
+    .inner {
+        display: block;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 50px;
+            background-color: #FFF;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            transition: ease-out .2s all;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 50px;
+            background-color: #FFF;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: ease-out .2s all;
+        }
+    }
+
+    .label {
+        color: #FFF;
+        opacity: 0;
+        transition: all .2s ease-out;
+    }
+
+    &:hover,
+    &:focus {
+        .inner {
+            &:before {
+                transform: translate(-50%, 0%) rotate(0);
+                top: 25%;
+            }
+
+            &:after {
+                transform: translate(-50%, 0%) rotate(0);
+                top: 76%;
+            }
+        }
+
+        .label {
+            opacity: 1;
+        }
+    }
+}
