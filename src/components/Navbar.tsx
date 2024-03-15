@@ -13,12 +13,13 @@ const Navbar = () => {
             if (scrollPosition <= 10) {
                 setNavbarVisible(true);
                 setNavbarBgVisible(false);
-            } else if (scrollPosition > 10 && scrollPosition <= 105) {
+            } else if (scrollPosition > 10) { //  && scrollPosition <= 105
                 setNavbarVisible(false);
-            } else {
-                setNavbarVisible(true);
-                setNavbarBgVisible(true);
             }
+            // } else {
+            //     setNavbarVisible(true);
+            //     setNavbarBgVisible(true);
+            // }
         };
 
         window.addEventListener('scroll', handleScroll);

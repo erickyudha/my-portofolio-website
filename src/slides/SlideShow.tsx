@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SlideShow.scss";
 import SlideData from "./SlideData";
 
@@ -17,6 +17,14 @@ const SlideShow = ({ data }: SlideShowProps) => {
         setHoveredIndex(index);
         setSelectedData(data[index]);
     };
+
+    useEffect(() => {
+        const navbar = document.getElementsByTagName("nav")[0];
+        const footer = document.getElementsByTagName("footer")[0];
+
+        navbar.style.display = "none";
+        footer.style.display = "none";
+    }, [])
 
     return (
         <section className="slide-show">
@@ -54,20 +62,7 @@ const SlideShow = ({ data }: SlideShowProps) => {
             </div>
             <main>
                 <div className="overlay">
-                    <div className="top-text">
-                        <h4>{selectedData.category}</h4>
-                        <div className="line"></div>
-                        <h1>{selectedData.title}</h1>
-                        <div className="period">/ / /  {selectedData.time}</div>
-
-                        <span className="decoration">ERICK YUDHA / / /</span>
-                    </div>
-                    <div className="slide-content">
-                        {selectedData.content}
-                    </div>
-                    <div className="bottom-text">
-                        <p>{selectedData.description}</p>
-                    </div>
+                    {selectedData.content}
                 </div>
             </main>
         </section>

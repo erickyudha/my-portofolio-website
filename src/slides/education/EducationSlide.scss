@@ -1,0 +1,19 @@
+#education-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 100%;
+
+    .desc {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .edu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import EducationSlide from './slides/education/EducationSlide'
+import SlideShow from './slides/SlideShow';
+import slidesData from './slides/_slidesData'
 
 
 const root = ReactDOM.createRoot(
@@ -17,7 +19,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/slide' element={<EducationSlide/>} />
+          <Route path='/slide' element={<SlideShow data={slidesData}/>} />
         </Route>
       </Routes>
     </BrowserRouter>
