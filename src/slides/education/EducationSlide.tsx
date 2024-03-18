@@ -9,6 +9,7 @@ const EducationSlide = () => {
                 <li className='edu-item'>
                     <h1>UNIVERSITAS SUMATERA UTARA</h1>
                     <h2>Computer Science - Bachelor Degree</h2>
+                    <h3>September 2020 - March 2024</h3>
                     <h4>GPA 3.84 - CUM LAUDE</h4>
                     <p className='desc'>Relevant Courses:
                         <span className="tooltip t" data-tooltip="HTML, CSS, JS, PHP" data-tooltip-pos="up" data-tooltip-length="medium">Web Development</span>
@@ -20,6 +21,7 @@ const EducationSlide = () => {
                 <li className='edu-item'>
                     <h1>BINAR ACADEMY</h1>
                     <h2>Fullstack Web Development - Kampus Merdeka</h2>
+                    <h3>August 2022 - January 2023</h3>
                     <h4>HARDSKILL 5/5 & SOFTSKILL 4.9/5 - MOST PROGRESSIVE STUDENT AWARD</h4>
                     <p className='desc'>Relevant Skills:
                         <span className="tooltip t" data-tooltip="React.js, Redux" data-tooltip-pos="up" data-tooltip-length="medium">Frontend</span>

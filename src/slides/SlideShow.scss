@@ -125,6 +125,11 @@ main {
             40px 0vw 200px $neon-primary-color;
     }
 
+    h3 {
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
     h4 {
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -249,13 +254,33 @@ main {
         padding: 20px;
         transition: ease-in-out 0.1s;
         transform: scale(1);
-        background-color: rgba($color: #000000, $alpha: 0.4);
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h1, h2, h3, h4 {
+            padding: 0;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
+
+        h4 {
+            font-size: 0.9em;
+            color: $neon-secondary-color;
+        }
     }
 
     .edu-item:hover {
         transform: scale(1.05);
         transition: ease-in-out 0.1s;
-        background-color: rgba($color: #000000, $alpha: 0.8);
+        background-color: rgba($color: #000000, $alpha: 0.9);
     }
 }
 
@@ -268,9 +293,115 @@ main {
     transition: ease-in-out 0.1s;
 }
 .tooltip:hover {
-    background-color: #cd3ec3;
-    transition: 0.1s ease-in-out;
+     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .tooltip:after,
 .tooltip:before {
