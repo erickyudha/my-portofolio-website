@@ -3,7 +3,7 @@ import EducationSlide from './EducationSlide';
 
 
 const educationData: SlideData = {
-    name: 'EDUCATION',
+    name: 'EDUCATIONS',
     content: <EducationSlide />
 }
 

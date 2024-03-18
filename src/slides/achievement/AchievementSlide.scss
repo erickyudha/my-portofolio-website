@@ -1,0 +1,39 @@
+@use '../../base';
+
+#ach-slide {
+    .ach-list {
+        list-style: none;
+        background-color: 0;
+        margin-top: 20px;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+
+        li {
+            margin-bottom: 40px;
+            border-left: 2px solid base.$neon-secondary-color;
+            padding: 10px;
+            transform: scale(1);
+            transition: ease-in-out 0.5s;
+        }
+
+        li:hover {
+            padding: 15px 20px;
+            transform: scale(1.08);
+            background-color: rgba($color: base.$neon-primary-color, $alpha: 0.3);
+            transition: ease-in-out 0.5s;
+        }
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        font-family: base.$secondary-font;
+        font-size: 0.9em;
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: justify;
+    }
+}

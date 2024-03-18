@@ -2,7 +2,7 @@ import SlideData from '../SlideData'
 import ExperienceSlide from './ExperienceSlide';
 
 const experienceData: SlideData = {
-    name: 'EXPERIENCE',
+    name: 'EXPERIENCES',
     content: <ExperienceSlide />
 }
 

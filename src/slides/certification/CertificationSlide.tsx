@@ -3,7 +3,7 @@ import './CertificationSlide.scss'
 const CertificationSlide = () => {
     return (
         <div id="cert-slide">
-            <h4>CERTIFICATION</h4>
+            <h4>CERTIFICATIONS</h4>
             <div className='line'></div>
             <ul className='cert-prov-list'>
                 <li className='cert-prov'>

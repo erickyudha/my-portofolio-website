@@ -3,13 +3,13 @@ import './ExperienceSlide.scss';
 const ExperienceSlide = () => {
     return (
         <div id="exp-slide">
-            <h4>EXPERIENCE</h4>
+            <h4>EXPERIENCES</h4>
             <div className='line'></div>
             <div className='exp-content-outer'>
                 <ul className='exp-list'>
                     <li className='exp-item'>
-                        <h1>Data Processing Automation</h1>
                         <div className='exp-content'>
+                            <h1>Data Processing Automation</h1>
                             <h2>Freelance (2023 - 2024)</h2>
                             <ul className='exp-tags'>
                                 <li>Data Processing</li>
@@ -28,8 +28,8 @@ const ExperienceSlide = () => {
                         </div>
                     </li>
                     <li className='exp-item'>
-                        <h1>Graphic Designer</h1>
                         <div className='exp-content'>
+                            <h1>Graphic Designer</h1>
                             <h2>RSU Bunda Thamrin Medan (July 2023 - August 2023)</h2>
                             <ul className='exp-tags'>
                                 <li>Digital Promotion</li>

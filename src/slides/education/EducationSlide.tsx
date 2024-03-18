@@ -3,7 +3,7 @@ import './EducationSlide.scss'
 const EducationSlide = () => {
     return (
         <div id="education-slide">
-            <h4>EDUCATION</h4>
+            <h4>EDUCATIONS</h4>
             <div className="line" />
             <ul className='edu-list'>
                 <li className='edu-item'>
