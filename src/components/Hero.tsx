@@ -44,9 +44,6 @@ const Hero = () => {
                     .
                 </h1>
             </div>
-            <h4>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, blanditiis autem perferendis commodi delectus eligendi quaerat quia qui. Ex officiis rerum saepe sapiente aspernatur minus nulla officia quae accusantium harum.
-            </h4>
         </section>
     );
 };

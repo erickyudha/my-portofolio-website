@@ -9,7 +9,6 @@ import EducationSlide from './slides/education/EducationSlide'
 import SlideShow from './slides/SlideShow';
 import slidesData from './slides/_slidesData'
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -19,8 +18,14 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/slide' element={<SlideShow data={slidesData}/>} />
         </Route>
+        <Route path="/resume" element={<SlideShow data={slidesData} index={0} />} />
+        <Route path='/resume/experiences' element={<SlideShow data={slidesData} index={0} />} />
+        <Route path='/resume/educations' element={<SlideShow data={slidesData} index={1} />} />
+        <Route path='/resume/certifications' element={<SlideShow data={slidesData} index={2} />} />
+        <Route path='/resume/projects' element={<SlideShow data={slidesData} index={3} />} />
+        <Route path='/resume/achievements' element={<SlideShow data={slidesData} index={4} />} />
+        <Route path='/resume/github' element={<SlideShow data={slidesData} index={5} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

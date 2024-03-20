@@ -9,7 +9,7 @@
         padding: 20px;
         background-color: rgba($color: #000000, $alpha: 0.8);
 
-        li {
+        > li {
             margin-bottom: 40px;
             border-left: 2px solid base.$neon-secondary-color;
             padding: 10px;
@@ -17,7 +17,7 @@
             transition: ease-in-out 0.5s;
         }
 
-        li:hover {
+        > li:hover {
             padding: 15px 20px;
             transform: scale(1.08);
             background-color: rgba($color: base.$neon-primary-color, $alpha: 0.3);
@@ -33,7 +33,32 @@
         font-family: base.$secondary-font;
         font-size: 0.9em;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 5px;
         text-align: justify;
+    }
+
+    .ach-tags {
+        margin-top: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        box-sizing: border-box;
+
+        li {
+            box-sizing: border-box;
+            background-color: #911189;
+            padding: 3px 5px;
+            font-size: 0.7em;
+            border-radius: 5px;
+            transition: ease-in-out 0.1s;
+        }
+
+        li:hover {
+            background-color: #cd3ec3;
+            transition: 0.1s ease-in-out;
+        }
+        
     }
 }

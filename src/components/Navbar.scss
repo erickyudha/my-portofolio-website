@@ -20,21 +20,28 @@ nav {
         display: flex;
         gap: 1em;
 
-        a {
+        a, button {
             font-weight: 700;
             font-size: 1em;
             color: #fff;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-family: base.$primary-font;
         }
     }
 
     h1 {
         font-weight: bold;
-        font-size: 2em;
-        color: base.$secondary-color;
+        font-size: 1.7em;
+        color: base.$neon-secondary-color;
         margin: 0;
         opacity: 1;
         font-family: base.$special-font;
-        text-shadow: 0 0 2px base.$secondary-color, 0 0 1px base.$secondary-color, 0 0 1px base.$secondary-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-right: 20px;
     }
 }
 

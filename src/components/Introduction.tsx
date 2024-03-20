@@ -19,7 +19,15 @@ const Introduction = () => {
                         <div>BORN IN BOGOR</div>
                         <div>LIVE IN MEDAN</div>
                     </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, nisi. Possimus dolorem mollitia repudiandae optio eaque fuga, praesentium facere! Quasi quis odit pariatur, corporis magni explicabo maiores iure dolore officiis?</p>
+                    <p>Motivated computer science graduate with
+                        fullstack development expertise, eager to
+                        apply programming, problem-solving, and
+                        project management skills. Recognized as a
+                        fast learner and flexible team player, with a
+                        track record of delivering innovative
+                        solutions. Ready to contribute to dynamic
+                        teams and tackle new challenges in the tech
+                        industry. </p>
                 </div>
                 <img src={pic} alt="" />
             </div>

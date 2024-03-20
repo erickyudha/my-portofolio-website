@@ -1,45 +1,42 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SlideShow.scss";
 import SlideData from "./SlideData";
 
 interface SlideShowProps {
-    data: Array<SlideData>
+    data: Array<SlideData>;
+    index: number;
 }
 
-const SlideShow = ({ data }: SlideShowProps) => {
-    // State to track list items and currently hovered item index
+const SlideShow: React.FC<SlideShowProps> = ({ data, index }) => {
     const [listItems] = useState(data.map(obj => obj.name));
-    const [hoveredIndex, setHoveredIndex] = useState(0);
-    const [selectedData, setSelectedData] = useState(data[0]);
-
-    // Function to handle hover over list item
-    const handleClick = (index: number) => {
-        setHoveredIndex(index);
-        setSelectedData(data[index]);
-    };
+    const [hoveredIndex, setHoveredIndex] = useState(index);
+    const [selectedData, setSelectedData] = useState(data[index]);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const navbar = document.getElementsByTagName("nav")[0];
-        const footer = document.getElementsByTagName("footer")[0];
+        setSelectedData(data[hoveredIndex]);
+        navigate(`/resume/${selectedData.name.toLowerCase()}`);
+    }, [hoveredIndex, data, navigate, selectedData]);
 
-        navbar.style.display = "none";
-        footer.style.display = "none";
-    }, [])
+    const handleClick = (index: number) => {
+        setHoveredIndex(index);
+    };
 
     return (
         <section className="slide-show">
             <div className="side">
                 <div className="btn-container">
-                    <button className="close-btn">
+                    <button onClick={() => {
+                        navigate('/');
+                    }} className="close-btn">
                         <span className="inner">
                             <span className="label">Close</span>
                         </span>
                     </button>
                 </div>
                 <ul className="sidebar-slide">
-                    {/* Map through list items and render each one */}
                     {listItems.map((item, index) => {
-                        // Calculate the classes for each list item based on its position relative to the hovered item
                         let classes = "";
                         if (index === hoveredIndex) {
                             classes = "forward-3";

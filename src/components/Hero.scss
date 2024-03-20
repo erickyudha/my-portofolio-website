@@ -31,6 +31,7 @@ $neon-secondary-color: #FFD5FF;
         position: absolute;
         z-index: -2;
         width: 90vw;
+        min-height: 100vh;
         height: auto;
         background-attachment: fixed;
     }

@@ -13,13 +13,9 @@ const Navbar = () => {
             if (scrollPosition <= 10) {
                 setNavbarVisible(true);
                 setNavbarBgVisible(false);
-            } else if (scrollPosition > 10) { //  && scrollPosition <= 105
+            } else if (scrollPosition > 10) {
                 setNavbarVisible(false);
             }
-            // } else {
-            //     setNavbarVisible(true);
-            //     setNavbarBgVisible(true);
-            // }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -29,18 +25,32 @@ const Navbar = () => {
         };
     }, []);
 
+    const scrollToSection = (sectionId: string) => {
+        if (sectionId === 'contact') {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        } else {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <nav className={`${navbarVisible ? 'visible' : 'hidden'} ${navbarBgVisible ? 'with-bg' : ''}`}>
             <div>
-                <Link to={"/home"}>HOME</Link>
-                <Link to={"/about"}>ABOUT</Link>
+                <button onClick={() => scrollToSection('intro')}>INTRO</button>
+                <Link to={"/resume"}>RESUME</Link>
             </div>
 
-            <h1>ERICK YUDHA</h1>
+            <h1>erickyudha.</h1>
 
             <div>
-                <Link to={"/projects"}>PROJECTS</Link>
-                <Link to={"/contact"}>CONTACT</Link>
+                <Link to={"/resume/projects"}>PROJECTS</Link>
+                <button onClick={() => scrollToSection('contact')}>CONTACT</button>
             </div>
         </nav>
     );
