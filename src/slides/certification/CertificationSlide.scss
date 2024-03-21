@@ -44,7 +44,7 @@
                 transition: 0.1s ease-in-out;
             }
         }
-        
+
         .cert-list {
             display: flex;
             flex-direction: column;
@@ -53,7 +53,7 @@
             box-sizing: border-box;
             padding: 20px 10px;
             padding-bottom: 0;
-            
+
             li {
                 box-sizing: border-box;
                 border-left: 2px solid base.$neon-secondary-color;
@@ -61,7 +61,7 @@
                 transform: scale(1);
                 background-color: transparent;
                 transition: ease-in-out 0.5s;
-                
+
                 h4 {
                     letter-spacing: 1px;
                 }
@@ -80,6 +80,29 @@
             }
         }
 
-        
+
+    }
+
+    @media screen and (max-width: 768px) {
+
+        /* Adjust styling for screens smaller than 768px */
+        .cert-prov-list {
+            .cert-list {
+                li {
+                    padding: 10px 15px;
+                    transform: scale(1);
+                    background-color: transparent;
+                    transition: ease-in-out 0.5s;
+
+                }
+
+                li:hover {
+                    background-color: rgba($color: #db17e5, $alpha: 0.3);
+                    padding: 10px 15px;
+                    transform: scale(1);
+                    transition: ease-in-out 0.5s;
+                }
+            }
+        }
     }
 }

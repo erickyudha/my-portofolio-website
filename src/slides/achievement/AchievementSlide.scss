@@ -12,13 +12,13 @@
         > li {
             margin-bottom: 40px;
             border-left: 2px solid base.$neon-secondary-color;
-            padding: 10px;
+            padding: 0px 10px;
             transform: scale(1);
             transition: ease-in-out 0.5s;
         }
 
         > li:hover {
-            padding: 15px 20px;
+            padding: 10px 15px;
             transform: scale(1.08);
             background-color: rgba($color: base.$neon-primary-color, $alpha: 0.3);
             transition: ease-in-out 0.5s;
@@ -60,5 +60,22 @@
             transition: 0.1s ease-in-out;
         }
         
+    }
+
+    @media screen and (max-width: 768px) { /* Adjust styling for screens smaller than 768px */        
+        .ach-list {
+            > li {
+                padding: 10px 15px;
+                transform: scale(1);
+                transition: ease-in-out 0.5s;
+            }
+    
+            > li:hover {
+                padding: 10px 15px;
+                transform: scale(1);
+                background-color: rgba($color: base.$neon-primary-color, $alpha: 0.3);
+                transition: ease-in-out 0.5s;
+            }
+        }
     }
 }

@@ -24,5 +24,14 @@
         transform: scale(1.1);
         transition: ease-in-out 0.5s;
     }
+
+    @media screen and (max-width: 768px) {
+
+        img:hover {
+            transform: scale(1);
+            transition: ease-in-out 0.5s;
+        }
+    }
+
 }
 

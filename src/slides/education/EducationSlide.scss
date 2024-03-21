@@ -218,5 +218,17 @@ $neon-secondary-color: #FFD5FF;
         gap: 10px;
         align-items: center ;
     }
+
+    @media screen and (max-width: 768px) {
+
+        /* Adjust styling for screens smaller than 768px */
+        .edu-list {    
+            .edu-item:hover {
+                transform: scale(1);
+                transition: ease-in-out 0.1s;
+                background-color: rgba($color: #000000, $alpha: 0.95);
+            }
+        }
+    }
 }
 
