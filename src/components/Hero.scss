@@ -51,6 +51,14 @@ $neon-secondary-color: #FFD5FF;
     h4 {
         margin-top: 30px;
     }
+
+    @media screen and (max-width: 768px) { /* Adjust styling for screens smaller than 768px */        
+        #headline {
+            h1 {
+                font-size: 4em;
+            }
+        }
+    }
 }
 
 .neon {
@@ -94,3 +102,4 @@ $neon-secondary-color: #FFD5FF;
         opacity: 0.4;
     }
 }
+

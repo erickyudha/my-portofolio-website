@@ -42,6 +42,15 @@ nav {
         font-weight: 700;
         text-transform: uppercase;
         margin-right: 20px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 768px) { /* Adjust styling for screens smaller than 768px */        
+        justify-content: center;
+        
+        div {
+            display: none;
+        }
     }
 }
 
