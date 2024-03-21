@@ -54,10 +54,13 @@ $neon-secondary-color: #FFD5FF;
 
     @media screen and (max-width: 768px) { /* Adjust styling for screens smaller than 768px */        
         #headline {
+            padding: 5px 20px;
             h1 {
-                font-size: 4em;
+                font-size: 3em;
             }
         }
+
+        
     }
 }
 

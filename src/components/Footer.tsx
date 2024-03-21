@@ -34,15 +34,15 @@ const Footer: React.FC = () => {
       <h4>Contact Me</h4>
       <div className="social-icon">
         <FontAwesomeIcon icon={faLinkedin} />
-        <a href="http://linked.in/erickyudha">erickyudha</a>
+        <a target='_blank' href="http://linkedin.com/in/erickyudha">erickyudha</a>
       </div>
       <div className="social-icon">
         <FontAwesomeIcon icon={faGithub} />
-        <a href="http://github.com/erickyudha">erickyudha</a>
+        <a target='_blank' href="http://github.com/erickyudha">erickyudha</a>
       </div>
       <div className="social-icon">
         <FontAwesomeIcon icon={faGoogle} />
-        <a href="mailto:erickyudha18@gmail.com">erickyudha18@gmail.com</a>
+        <a target='_blank' href="mailto:erickyudha18@gmail.com">erickyudha18@gmail.com</a>
       </div>
     </footer>
   );

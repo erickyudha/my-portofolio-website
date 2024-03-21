@@ -29,6 +29,12 @@ nav {
             cursor: pointer;
             padding: 0;
             font-family: base.$primary-font;
+            transition: ease-in-out 0.2s;
+        }
+
+        a:hover, button:hover {
+            font-size: 1.1em;
+            transition: 0.2 ease-in-out;
         }
     }
 
