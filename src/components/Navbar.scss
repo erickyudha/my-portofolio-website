@@ -17,7 +17,8 @@ nav {
     }
 
     div {
-        display: flex;
+        display: none;
+        // display: flex;
         gap: 1em;
 
         a, button {
@@ -44,7 +45,7 @@ nav {
         color: base.$neon-secondary-color;
         margin: 0;
         opacity: 1;
-        font-family: base.$special-font;
+        font-family: base.$primary-font;
         font-weight: 700;
         text-transform: uppercase;
         margin-right: 20px;

@@ -94,7 +94,7 @@ $neon-secondary-color: #FFD5FF;
             width: inherit;
 
             h1 {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
     
             p {
@@ -108,22 +108,23 @@ $neon-secondary-color: #FFD5FF;
         }
         
         .hover-slide {
-            height: 60px;
+            height: 40px;
     
             div {
-                line-height: 60px;
-                font-size: 2.2em;
+                line-height: 40px;
+                font-size: 1.9em;
             }
         }
     
         .hover-slide:hover {
             div {
-                transform: translateY(-60px);
+                transform: translateY(-40px);
             }
         }
 
         img {
             width: 100%;
+            height: auto;
         }
     }
 }

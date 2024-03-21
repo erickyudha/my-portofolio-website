@@ -1,25 +1,40 @@
 import React, { useEffect } from "react";
 import "./Hero.scss";
 import bg from "./tokyo-city-aesthetic.gif";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     useEffect(() => {
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const heroImage = document.getElementById("hero-image");
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const heroImage = document.getElementById("hero-image");
 
-        if (heroImage) {
-            const parallaxValue = scrollPosition * 0.5; // Adjust the parallax effect by changing the multiplier
-            heroImage.style.top = `${parallaxValue}px`;
+            if (heroImage) {
+                const parallaxValue = scrollPosition * 0.5; // Adjust the parallax effect by changing the multiplier
+                heroImage.style.top = `${parallaxValue}px`;
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const scrollToSection = (sectionId: string) => {
+        if (sectionId === 'contact') {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        } else {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-        window.removeEventListener("scroll", handleScroll);
-    };
-}, []);
 
 
     return (
@@ -43,6 +58,12 @@ const Hero = () => {
                     <span className="flicker-slow">E</span>
                     .
                 </h1>
+            </div>
+            <div className="mobile-nav">
+                <button onClick={() => scrollToSection('intro')}>INTRO</button>
+                <Link to={"/resume"}>RESUME</Link>
+                <Link to={"/resume/projects"}>PROJECTS</Link>
+                <button onClick={() => scrollToSection('contact')}>CONTACT</button>
             </div>
         </section>
     );
