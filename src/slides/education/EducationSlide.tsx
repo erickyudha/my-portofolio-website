@@ -10,7 +10,7 @@ const EducationSlide = () => {
                     <h1>UNIVERSITAS SUMATERA UTARA</h1>
                     <h2>Computer Science - Bachelor Degree</h2>
                     <h3>September 2020 - March 2024</h3>
-                    <h4>GPA 3.84 - CUM LAUDE</h4>
+                    <h4>GPA 3.83 - CUM LAUDE</h4>
                     <p className='desc'>Relevant Courses:
                         <span className="tooltip t" data-tooltip="HTML, CSS, JS, PHP" data-tooltip-pos="up" data-tooltip-length="medium">Web Development</span>
                         <span className="tooltip t" data-tooltip="MySQL, SQLite" data-tooltip-pos="up" data-tooltip-length="medium">Database Management</span>
